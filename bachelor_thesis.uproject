@@ -340,10 +340,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "WorldPartitionHLODUtilities",
-			"Enabled": false
-		},
-		{
 			"Name": "XCodeSourceCodeAccess",
 			"Enabled": false,
 			"SupportedTargetPlatforms": [
