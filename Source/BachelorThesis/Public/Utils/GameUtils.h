@@ -16,5 +16,8 @@ class BACHELORTHESIS_API UGameUtils : public UBlueprintFunctionLibrary
 	
 public:
 	UFUNCTION(BlueprintCallable, meta = (WorldContext = "WorldContextObject", DefaultToSelf = "WorldContextObject", CallableWithoutWorldContext, AdvancedDisplay = "2"))
-	static void PrintDebugString(const UObject* WorldContextObject, const FString& Content, FLinearColor Color = FLinearColor(0, 127,127), float Duration = 1.f);
+	static void PrintDebugString(const UObject* WorldContextObject, const FString& Content, FLinearColor Color = FLinearColor(0, 0.5f, 0.5f), float Duration = 1.f);
+
+	UFUNCTION(BlueprintCallable, Category = "Game|Utils", DisplayName="DuplicateObject")
+	static UObject* K2_DuplicateObject(UObject* Object);
 };

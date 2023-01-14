@@ -3,6 +3,7 @@
 
 #include "Utils/GameUtils.h"
 #include "Kismet/GameplayStatics.h"
+#include "UObject/UObjectGlobals.h"
 #include "EngineMinimal.h"
 // #include "Kismet/BlueprintFunctionLibrary.h"
 
@@ -12,4 +13,13 @@ void UGameUtils::PrintDebugString(const UObject* WorldContextObject, const FStri
 	const FString Message = Prefix + Content;
 	
 	GEngine->AddOnScreenDebugMessage(-1, Duration, Color.ToFColor(false), Message);
+}
+
+UObject* UGameUtils::K2_DuplicateObject(UObject* Object)
+{
+	if (Object == nullptr) {
+		UE_LOG(LogTemp, Warning, TEXT("Could not duplicate object, received nullptr"));
+		return nullptr;
+	}
+	return DuplicateObject(Object, Object->GetOuter());
 }
