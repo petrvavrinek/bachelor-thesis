@@ -23,3 +23,11 @@ UObject* UGameUtils::K2_DuplicateObject(UObject* Object)
 	}
 	return DuplicateObject(Object, Object->GetOuter());
 }
+
+bool UGameUtils::RenameObject(UObject* Object, const FString& NewName)
+{
+	if (Object == nullptr)
+		UE_LOG(LogTemp, Warning, TEXT("Could not rename object, received nullptr"));
+
+	return Object->Rename(*NewName, nullptr, REN_ForceNoResetLoaders);
+}

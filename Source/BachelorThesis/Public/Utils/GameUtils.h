@@ -20,4 +20,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Game|Utils", DisplayName="DuplicateObject")
 	static UObject* K2_DuplicateObject(UObject* Object);
+
+	UFUNCTION(BlueprintCallable, Category = "Game|Utils")
+	static bool RenameObject(UObject* Object, const FString& NewName);
 };
