@@ -17,5 +17,7 @@ Screenshot (15.01.2023)
 - Visualize grid
 - Add instruction "play", "stop", "pause" buttons
 
+## Known issues
+- If any widget with droppable inside is moved to another droppable area, all children dissapear, after add one, everything shows again
 
 Developed with Unreal Engine 5
