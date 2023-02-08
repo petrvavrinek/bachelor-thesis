@@ -14,6 +14,9 @@ Screenshot (15.01.2023)
 Screenshot (17.01.2023)
 ![Simple grid](./Docs/screenshot-23-01-17.png)
 
+Screenshot (17.01.2023)
+![Conditional instruction, improved icons](./Docs/screenshot-09-02-2023.png)
+
 ## TOTO Features
 - Own functions
 - Levels

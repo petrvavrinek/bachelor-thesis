@@ -12,6 +12,8 @@ void UGameUtils::PrintDebugString(const UObject* WorldContextObject, const FStri
 	const FString Prefix = WorldContextObject ? ("[" + WorldContextObject->GetName() + "] ") : "";
 	const FString Message = Prefix + Content;
 	
+
+	EMouseCursor
 	GEngine->AddOnScreenDebugMessage(-1, Duration, Color.ToFColor(false), Message);
 }
 
