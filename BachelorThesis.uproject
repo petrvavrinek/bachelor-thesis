@@ -155,10 +155,6 @@
 			"Enabled": false
 		},
 		{
-			"Name": "GeometryMode",
-			"Enabled": false
-		},
-		{
 			"Name": "GLTFExporter",
 			"Enabled": false
 		},
