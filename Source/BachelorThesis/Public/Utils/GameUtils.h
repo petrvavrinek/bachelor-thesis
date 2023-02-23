@@ -23,4 +23,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Game|Utils")
 	static bool RenameObject(UObject* Object, const FString& NewName);
+
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Game|Utils")
+	static bool GetLevelName(TSoftObjectPtr<UWorld> World, FString& LevelName);
 };

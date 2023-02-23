@@ -11,9 +11,6 @@ void UGameUtils::PrintDebugString(const UObject* WorldContextObject, const FStri
 {
 	const FString Prefix = WorldContextObject ? ("[" + WorldContextObject->GetName() + "] ") : "";
 	const FString Message = Prefix + Content;
-	
-
-	EMouseCursor
 	GEngine->AddOnScreenDebugMessage(-1, Duration, Color.ToFColor(false), Message);
 }
 
@@ -32,4 +29,13 @@ bool UGameUtils::RenameObject(UObject* Object, const FString& NewName)
 		UE_LOG(LogTemp, Warning, TEXT("Could not rename object, received nullptr"));
 
 	return Object->Rename(*NewName, nullptr, REN_ForceNoResetLoaders);
+}
+
+
+bool UGameUtils::GetLevelName(TSoftObjectPtr<UWorld> World, FString& LevelName)
+{
+	if (!World.IsValid())	return false;
+	LevelName = FString(World->GetMapName());
+	LevelName.RemoveFromStart(World->StreamingLevelsPrefix);
+	return true;
 }
