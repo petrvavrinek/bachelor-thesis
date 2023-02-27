@@ -17,8 +17,10 @@ Screenshot (17.01.2023)
 Screenshot (17.01.2023)
 ![Conditional instruction, improved icons](./Docs/screenshot-09-02-2023.png)
 
+Screenshot (28.02.2023)
+![Custom instruction functions](./Docs/screenshot-28-02-2023.png)
+
 ## TOTO Features
-- Own functions
 - Levels
 - Translations
 - Better models, textures, etc...
