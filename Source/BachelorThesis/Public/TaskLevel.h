@@ -2,24 +2,16 @@
 
 #include "CoreMinimal.h"
 #include "Engine/DataTable.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Engine/Blueprint.h"
 #include "TaskLevel.generated.h"
 
+/** There is no way to reference World in the Blueprints, this wrapper should help it */
 USTRUCT(BlueprintType)
-struct FTaskLevel: public FTableRowBase {
+struct FWorldRef {
 
-	FTaskLevel()
-	{ }
-
-	GENERATED_USTRUCT_BODY()
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UTexture2D* Thumbnail;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FText Title;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FText Description;
-
+	GENERATED_BODY()
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSoftObjectPtr<UWorld> Level;
 };
