@@ -28,6 +28,6 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = "Game|Utils")
 	static bool GetLevelName(TSoftObjectPtr<UWorld> World, FString &LevelName);
 
-	UFUNCTION(BlueprintCallable, Category = "Game|Utils")
-	static TArray<AActor*> GetAllActorsOfClass(AActor *ActorContext, TSubClassOf<AActor> ActorClass);
+	/*UFUNCTION(BlueprintCallable, Category = "Game|Utils")
+	static TArray<AActor*> GetAllActorsOfClass(AActor *ActorContext, TSubClassOf<AActor> ActorClass);*/
 };

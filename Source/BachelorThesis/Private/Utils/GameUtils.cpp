@@ -40,19 +40,19 @@ bool UGameUtils::GetLevelName(TSoftObjectPtr<UWorld> World, FString &LevelName)
 	return true;
 }
 
-TArray<AActor *> UGameUtils::GetAllActorsOfClass(AActor *ActorContext, TSubclassOf<AActor> ActorClass)
-{
-	if (ActorContext == nullptr)
-		return {};
-
-	const UWorld *World = ActorContext->GetWorld();
-	if (!World)
-	{
-		UE_LOG(LogTemp, Log, TEXT("Cannot get world from %s", *ActorContext->GetName()));
-		return {};
-	}
-
-	TArray<AActor *> OutActors;
-	UGameplayStatics::GetAllActorsOfClass(ActorContext, ActorClass, OutActors);
-	return OutActors;
-}
+//TArray<AActor *> UGameUtils::GetAllActorsOfClass(AActor *ActorContext, TSubclassOf<AActor> ActorClass)
+//{
+//	if (ActorContext == nullptr)
+//		return {};
+//
+//	const UWorld *World = ActorContext->GetWorld();
+//	if (!World)
+//	{
+//		UE_LOG(LogTemp, Log, TEXT("Cannot get world from %s", *ActorContext->GetName()));
+//		return {};
+//	}
+//
+//	TArray<AActor *> OutActors;
+//	UGameplayStatics::GetAllActorsOfClass(ActorContext, ActorClass, OutActors);
+//	return OutActors;
+//}
